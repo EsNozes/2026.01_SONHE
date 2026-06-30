@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonhos de Seda - Contato</title>
+    <link rel="stylesheet" href="../CSS/contato.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header / Menu de Navegação -->
+    <header class="main-header">
+        <div class="logo">Sonhos de Seda</div>
+        <nav class="nav-menu">
+            <a href="index.html">HOME</a>
+            <a href="roupas.html">ROUPAS</a>
+            <a href="sobre.html">SOBRE NÓS</a>
+            <a href="contato.html" class="active">CONTATO</a>
+        </nav>
+        <div class="cart-icon">
+            <span class="icon">👜</span>
+            <span class="badge">0</span>
+        </div>
+    </header>
+
+    
+    <section class="page-header">
+        <div class="header-container">
+            <span class="page-top-subtitle">FALE CONOSCO</span>
+            <h1 class="page-title">Contato</h1>
+        </div>
+    </section>
+
+    
+    <main class="contact-section">
+        <div class="contact-container">
+            
+        
+            <div class="contact-info-column">
+                <h2 class="contact-headline">Estamos Aqui para Ajudar</h2>
+                <p class="contact-description">
+                    Tem alguma dúvida sobre pedidos, trocas ou produtos? Entre em contato e responderemos em até 24 horas úteis.
+                </p>
+
+                <div class="contact-methods-list">
+                    <!-- Método 1 -->
+                    <div class="contact-method-item">
+                        <span class="method-icon">✉</span>
+                        <div class="method-details">
+                            <h3>E-MAIL</h3>
+                            <p>contato@sonhosdeseda.com.br</p>
+                        </div>
+                    </div>
+
+                    <!-- Método 2 -->
+                    <div class="contact-method-item">
+                        <span class="method-icon">📞</span>
+                        <div class="method-details">
+                            <h3>WHATSAPP</h3>
+                            <p>(11) 93756-6261</p>
+                        </div>
+                    </div>
+
+                    <!-- Método 3 -->
+                    <div class="contact-method-item">
+                        <span class="method-icon">📍</span>
+                        <div class="method-details">
+                            <h3>ENDEREÇO</h3>
+                            <p>São Paulo, SP — Brasil</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+         
+            <div class="contact-form-column">
+                <form class="contact-form" id="whatsappForm">
+                    
+                    <div class="form-group">
+                        <label for="name">NOME</label>
+                        <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-MAIL</label>
+                        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">ASSUNTO</label>
+                        <select id="subject" name="subject" required>
+                            <option value="entrega">Pedido ou Entrega</option>
+                            <option value="troca">Trocas e Devoluções</option>
+                            <option value="duvida">Dúvida sobre Produtos</option>
+                            <option value="outro">Outros Assuntos</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">MENSAGEM</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+                    </div>
+
+                     <button type="submit" id="btnSubmit" class="btn-submit-contact">ENVIAR MENSAGEM</button>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Rodapé / Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-column footer-brand">
+                <h3 class="footer-logo">Sonhos de Seda</h3>
+                <p class="footer-tagline">Pijamas premium para quem merece o melhor descanso.</p>
+            </div>
+            <div class="footer-column">
+                <h4 class="footer-title">NAVEGAÇÃO</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="roupas.html">Roupas</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4 class="footer-title">AJUDA</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Trocas e Devoluções</a></li>
+                    <li><a href="#">Rastreio de Pedido</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4 class="footer-title">CONTATO</h4>
+                <ul class="footer-contact-info">
+                    <li>contato@sonhosdeseda.com.br</li>
+                    <li>WhatsApp: (11) 93756-6261</li>
+                    <li>Seg - Sex, 9h - 18h</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Sonhos de Seda. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+
+    <script src="../JS/contato.js"></script>
+</body>
+</html>

@@ -1,0 +1,692 @@
+/* Resets Básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    overflow-x: hidden;
+}
+
+/* --- HEADER --- */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #4A3E3D; /* Tom escuro elegante */
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #777777;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover, 
+.nav-menu a.active {
+    color: #4A3E3D;
+    border-bottom: 1px solid #4A3E3D;
+}
+
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-icon .badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #7A5C67; /* Tom arroxeado do botão */
+    color: white;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    /* Substitua pelo caminho correto da sua imagem de fundo do Figma */
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('sua-imagem-do-pijama.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+}
+
+/* Faixa roxa decorativa na base da imagem */
+.hero-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background-color: #4A2E35; 
+}
+
+.hero-container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.hero-content {
+    max-width: 550px;
+    color: #ffffff;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15); /* Melhora a leitura sobre a foto */
+}
+
+.hero-subtitle {
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 56px;
+    line-height: 1.1;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 300;
+    margin-bottom: 35px;
+    opacity: 0.95;
+}
+
+/* Botões */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    font-size: 13px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #7A5C67; /* Tom de roxo opaco do botão esquerdo */
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #634953;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px); /* Efeito sutil de vidro */
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    .main-header {
+        padding: 20px 4%;
+    }
+    .nav-menu {
+        display: none; /* Ideal implementar menu hambúrguer futuramente */
+    }
+    .hero-section {
+        padding: 0 4%;
+    }
+    .hero-title {
+        font-size: 40px;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .btn {
+        text-align: center;
+    }
+}
+/* --- BARRA DE BENEFÍCIOS --- */
+.benefits-bar {
+    background-color: #4A2E35; /* Mesmo tom roxo escuro da base do hero */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 12px 20px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.benefit-item p {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    font-weight: 300;
+}
+
+.benefit-icon {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* --- VITRINE DE PRODUTOS --- */
+.featured-products {
+    background-color: #FAF6F5; /* Fundo off-white suave visto no print */
+    padding: 80px 8%;
+}
+
+.products-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title-area {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-subtitle {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #888888;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    color: #4A3E3D;
+    font-weight: 400;
+}
+
+/* Grid de Organização */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Card Individual */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+}
+
+.product-image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4; /* Proporção vertical padrão para moda */
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Badges sobre a imagem */
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    padding: 4px 10px;
+    font-weight: 500;
+    z-index: 2;
+}
+
+.badge-bestseller {
+    background-color: #7A5C67; /* Tom arroxeado */
+}
+
+.badge-new {
+    background-color: #5C6E7A; /* Tom azul cinzento alternativo */
+}
+
+/* Informações do Produto */
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.product-rating {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+}
+
+.product-rating .stars {
+    color: #BA9D93; /* Tom bronze/dourado opaco para as estrelas */
+    letter-spacing: 1px;
+}
+
+.product-rating .rating-count {
+    color: #999999;
+}
+
+.product-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #4A3E3D;
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.current-price {
+    font-weight: 500;
+    color: #4A3E3D;
+}
+
+.old-price {
+    font-size: 12px;
+    text-decoration: line-through;
+    color: #A0A0A0;
+}
+
+/* Botão de Ação Inferior */
+.products-action {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-view-all {
+    display: inline-block;
+    padding: 14px 40px;
+    border: 1px solid #4A3E3D;
+    background: transparent;
+    color: #4A3E3D;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+.btn-view-all:hover {
+    background-color: #4A3E3D;
+    color: #ffffff;
+}
+
+/* Ajustes de Responsividade */
+@media (max-width: 992px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .benefits-bar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+    .featured-products {
+        padding: 50px 4%;
+    }
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    .section-title {
+        font-size: 28px;
+    }
+}
+/* --- SEÇÃO OFERTA ESPECIAL --- */
+.special-offer {
+    background-color: #EFE4EC; /* Tom lilás/rosa claro de fundo */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.offer-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.offer-subtitle {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #8A7379;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.offer-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px;
+    color: #4A3E3D;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.offer-description {
+    font-size: 13px;
+    color: #7A6B6E;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+.offer-description strong {
+    font-weight: 600;
+    color: #4A3E3D;
+}
+
+.btn-offer {
+    display: inline-block;
+    background-color: #7A5C67; /* Tom arroxeado padrão dos botões */
+    color: #ffffff;
+    padding: 12px 35px;
+    font-size: 13px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-offer:hover {
+    background-color: #634953;
+}
+
+/* --- SEÇÃO CATEGORIAS --- */
+.categories-section {
+    background-color: #FAF6F5; /* Mantém o fundo off-white suave */
+    padding: 80px 8%;
+}
+
+.categories-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.category-card {
+    position: relative;
+    cursor: pointer;
+}
+
+.category-image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4; /* Alinhado à proporção vertical dos cards */
+    overflow: hidden;
+}
+
+.category-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Efeito de zoom sutil ao passar o mouse */
+.category-card:hover .category-img {
+    transform: scale(1.03);
+}
+
+/* Gradiente escuro na base da foto para destacar o texto */
+.category-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 40%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 30px;
+}
+
+.category-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/* Ajustes de Responsividade */
+@media (max-width: 992px) {
+    .categories-grid {
+        gap: 15px;
+    }
+    .category-name {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .special-offer {
+        padding: 50px 20px;
+    }
+    .offer-title {
+        font-size: 28px;
+    }
+    .categories-section {
+        padding: 50px 4%;
+    }
+    .categories-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+/* --- SEÇÃO DE DEPOIMENTOS --- */
+.testimonials-section {
+    background-color: #EFE4EC; /* Tom lilás/rosa claro idêntico à oferta especial */
+    padding: 80px 8%;
+}
+
+.testimonials-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.testimonial-card {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02); /* Sombra bem leve e sutil */
+}
+
+.testimonial-stars {
+    color: #BA9D93; /* Tom bronze/dourado das estrelas */
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.testimonial-text {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #555555;
+    font-weight: 300;
+    flex-grow: 1; /* Garante alinhamento caso os textos mudem de tamanho */
+}
+
+.testimonial-author {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #8A7379;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+/* --- RODAPÉ (FOOTER) --- */
+.main-footer {
+    background-color: #26191B; /* Tom marrom bem escuro/quase preto do print */
+    color: #ffffff;
+    padding: 70px 8% 30px 8%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr repeat(3, 1fr);
+    gap: 40px;
+    padding-bottom: 50px;
+}
+
+.footer-brand {
+    padding-right: 20px;
+}
+
+.footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.footer-tagline {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #B3A7A9;
+    font-weight: 300;
+}
+
+.footer-title {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #B3A7A9;
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.footer-contact-info {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 12px;
+    color: #B3A7A9;
+    font-weight: 300;
+}
+
+/* Base do rodapé com o copyright */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 11px;
+    color: #8A7B7D;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+/* Ajustes de Responsividade */
+@media (max-width: 992px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .testimonials-section {
+        padding: 50px 4%;
+    }
+    .main-footer {
+        padding: 50px 4% 30px 4%;
+    }
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+}

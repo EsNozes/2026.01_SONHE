@@ -1,0 +1,280 @@
+/* Resets Básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FAF6F5; /* Tom off-white padrão do Figma */
+    color: #333333;
+    overflow-x: hidden;
+}
+
+/* --- HEADER --- */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #4A3E3D;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #777777;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover, 
+.nav-menu a.active {
+    color: #4A3E3D;
+    border-bottom: 1px solid #4A3E3D;
+}
+
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-icon .badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #7A5C67;
+    color: white;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+/* --- HERO / PAGE HEADER --- */
+.page-header {
+    background-color: #EFE4EC; /* Fundo lilás claro */
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.header-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.page-top-subtitle {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #8A7379;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.page-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 46px;
+    color: #4A3E3D;
+    font-weight: 400;
+}
+
+/* --- SEÇÃO PRINCIPAL DE CONTATO --- */
+.contact-section {
+    padding: 80px 8%;
+    background-color: #FAF6F5;
+}
+
+.contact-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: start;
+}
+
+/* Coluna de Informações (Esquerda) */
+.contact-info-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    color: #4A3E3D;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.contact-description {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #666666;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.contact-methods-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contact-method-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.method-icon {
+    font-size: 16px;
+    color: #8A7379;
+    margin-top: 2px;
+}
+
+.method-details h3 {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #8A7379;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.method-details p {
+    font-size: 14px;
+    color: #4A3E3D;
+    font-weight: 400;
+}
+
+/* Coluna do Formulário (Direita) */
+.contact-form-column {
+    background-color: #ffffff;
+    padding: 40px;
+    border: 1px solid #EFEAE8;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #888888;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #FAF6F5; /* Tom lilás/off-white sutil interno dos campos */
+    border: 1px solid #EFEAE8;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: #4A3E3D;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #A39698;
+    font-weight: 300;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #7A5C67; /* Destaca a borda ao clicar */
+}
+
+/* Botão de Envio */
+.btn-submit-contact {
+    background-color: #7A5C67; /* Tom de roxo opaco visto no print */
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-submit-contact:hover {
+    background-color: #634953;
+}
+
+/* --- RODAPÉ (FOOTER) --- */
+.main-footer {
+    background-color: #26191B;
+    color: #ffffff;
+    padding: 70px 8% 30px 8%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr repeat(3, 1fr);
+    gap: 40px;
+    padding-bottom: 50px;
+}
+
+.footer-brand { padding-right: 20px; }
+.footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 600; margin-bottom: 15px; }
+.footer-tagline { font-size: 12px; line-height: 1.6; color: #B3A7A9; font-weight: 300; }
+.footer-title { font-size: 11px; letter-spacing: 1.5px; margin-bottom: 20px; font-weight: 500; }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.footer-links a { text-decoration: none; font-size: 12px; color: #B3A7A9; font-weight: 300; }
+.footer-links a:hover { color: #ffffff; }
+.footer-contact-info { list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 12px; color: #B3A7A9; font-weight: 300; }
+.footer-bottom { max-width: 1200px; margin: 0 auto; padding-top: 25px; border-top: 1px solid rgba(255, 255, 255, 0.05); text-align: center; }
+.footer-bottom p { font-size: 11px; color: #8A7B7D; font-weight: 300; }
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 992px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-header { padding: 20px 4%; }
+    .nav-menu { display: none; }
+    .page-title { font-size: 36px; }
+    .contact-form-column { padding: 25px; }
+    .footer-container { grid-template-columns: 1fr; gap: 35px; }
+}
